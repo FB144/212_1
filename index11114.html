@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mein Blog</title>
+  <!-- Bootstrap einbinden (CDN) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <style>
+    .trainingsbild {
+      width: 50%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    /* Sternebewertung */
+    .stars span {
+      font-size: 1.8em;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .stars span.active {
+      color: gold;
+    }
+
+    body {
+      background-color: #f9f9f9;
+    }
+
+    footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Header styling */
+    header {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-primary text-white py-5">
+  <div class="container">
+    <h1 class="mb-3">Tägliche Essensgewohnheiten</h1>
+
+    <!-- 🎵 Musiksteuerung -->
+    <audio id="bg-music" loop>
+      <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" class="btn btn-light">🎵 Musik starten</button>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="file://lsbk-fs01/27ass1-19$/Eigene%20Dokumente/1%20Unterstufe_Mittelstufe/WEB%20ASM1/212%20Blog_Vorlagedateien/index.html">Home</a>
+  <a class="navbar-brand" href="file://lsbk-fs01/27ass1-19$/Eigene%20Dokumente/1%20Unterstufe_Mittelstufe/WEB%20ASM1/212%20Blog_Vorlagedateien/index11114.html">Tägliche Essensgewohnheiten</a>
+  <a class="navbar-brand" href="file://lsbk-fs01/27ass1-19$/Eigene%20Dokumente/1%20Unterstufe_Mittelstufe/WEB%20ASM1/212%20Blog_Vorlagedateien/index111111333%20-%20Kopie.html">Mein Fitness Programm</a>
+  <a class="navbar-brand" href="file://lsbk-fs01/27ass1-19$/Eigene%20Dokumente/1%20Unterstufe_Mittelstufe/WEB%20ASM1/212%20Blog_Vorlagedateien/mein_blog227.html">Bilder Karussell</a>
+</nav>
+
+<center><h3 class="mt-4">Mein Essensblog</h3></center>
+
+<!-- Hauptinhalt -->
+<div class="container mt-4">
+
+  <!-- Tag 1 -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h4 class="card-title">Tag 1 - 08. Oktober 2024</h4>
+      <p><strong>Uhrzeit:</strong> 08:00 Uhr</p>
+      <p><strong>Rezept:</strong> Haferflocken mit Banane und Nüssen</p>
+      <img src="https://raw-living.de/media/image/28/40/0e/Haferflocken-tagesfrisch.jpg" alt="Frühstück Bild" class="trainingsbild">
+
+      <!-- Bewertung -->
+      <div class="mt-3">
+        <h5>Bewertung:</h5>
+        <div class="stars" data-id="1">
+          <span data-star="1">★</span>
+          <span data-star="2">★</span>
+          <span data-star="3">★</span>
+          <span data-star="4">★</span>
+          <span data-star="5">★</span>
+        </div>
+        <div class="rating-count mt-1" id="rating-count-1">Bewertung: 0 Sterne</div>
+      </div>
+
+      <!-- Kommentare -->
+      <div class="comment-section mt-4" data-id="1">
+        <h5>Kommentare</h5>
+        <div class="comments-list" id="comments-1"></div>
+        <div class="form-group mt-2">
+          <textarea class="form-control" rows="2" placeholder="Kommentar schreiben..."></textarea>
+          <button class="btn btn-primary btn-sm mt-2 submit-comment">Absenden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tag 2 -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h4 class="card-title">Tag 2 - 09. Oktober 2024</h4>
+      <p><strong>Uhrzeit:</strong> 12:30 Uhr</p>
+      <p><strong>Rezept:</strong> Griechischer Salat mit Feta und Oliven</p>
+      <img src="https://www.oekotest.de/static_files/images/article/Feta-und-Oliven-duerfen-im-griechischen-Bauernsalat-nicht-fehlen-_Shutterstock-Sunny-Forest_11997_16x9.jpg" alt="Mittagessen Bild" class="trainingsbild">
+
+<!-- Bewertung -->
+<div class="mt-3">
+  <h5>Bewertung:</h5>
+  <div class="stars" data-id="2">
+    <span data-star="1">★</span>
+    <span data-star="2">★</span>
+    <span data-star="3">★</span>
+    <span data-star="4">★</span>
+    <span data-star="5">★</span>
+  </div>
+  <div class="rating-count mt-1" id="rating-count-2">Bewertung: 0 Sterne</div>
+</div>
+
+<!-- Kommentare -->
+<div class="comment-section mt-4" data-id="2">
+  <h5>Kommentare</h5>
+  <div class="comments-list" id="comments-2"></div>
+  <div class="form-group mt-2">
+    <textarea class="form-control" rows="2" placeholder="Kommentar schreiben..."></textarea>
+    <button class="btn btn-primary btn-sm mt-2 submit-comment">Absenden</button>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- Fußzeile -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  <p>&copy; 2025 Mein Blog. Alle Rechte vorbehalten.</p>
+</footer>
+
+
+<script src="js/musik_steuerung.js "></script>
+<script src="js/Sternenbewertung.js"></script>
+<script src="js/comment_system.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
